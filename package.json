@@ -4,12 +4,13 @@
   "description": "Create your meaningful text snippet",
   "publisher": "javad-ghased",
   "keywords": ["lorem ipsum", "dummy text", "emmet", "text generator", "persian", "farsi", "farsi lorem ipsum", "persian lorem ipsum","snippet"],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "https://github.com/djawad98/YourLorem",
-  "icon": "https://github.com/djawad98/YourLorem/src/icon.jpg",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.60.0"
   },
+
   "categories": [
     "Other",
     "Snippets"
