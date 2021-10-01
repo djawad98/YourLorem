@@ -9,9 +9,10 @@ You might have used `emmet` abbreviation for lorem text. Like `lorem12` and then
 
 Just type `falorem10` and then press `ctrl` twice.
 That's it. You have a 10 word-long text.
+
 *Do not forget to put your caret at the same line as the keyword.*
 
-YourLorem also have two commands which you can find in command palette.
+YourLorem also has two commands which you can find in command palette.
 
 # Customization
 There is 3 options to customize in YourLorem.
@@ -50,3 +51,12 @@ If you type `ulorem`  you have a 40 word-long text.
  - If you found **YourLorem** useful do share it with others.
  - Sample text in example above is from `Ebrahim Hadi quotes` google search.
  - دوستان فارسی زبان بدون هیچ سفارشی سازی می توانند از اکستنشن استفاده کنند.
+
+
+# Help YourLorem Grow
+
+
+[![alt text][1]][2]
+
+[1]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-2.svg
+[2]: https://www.buymeacoffee.com/djawad
