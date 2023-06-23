@@ -8,7 +8,7 @@ class YourLorem {
 
 	public keyword = "falorem";
 	public defaultQuantity = 10;
-	public sampleText = "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.";
+	public sampleText = "Radio telescope intelligent beings are creatures of the cosmos of brilliant syntheses Apollonius of Perga Cambrian explosion. Vanquish the impossible a very small stage in a vast cosmic arena hundreds of thousands hundreds of thousands explorations stirred by starlight. Permanence of the stars hearts of the stars from which we spring rich in mystery hydrogen atoms rich in mystery. Great turbulent clouds another world muse about inconspicuous motes of rock and gas inconspicuous motes of rock and gas citizens of distant epochs and billions upon billions upon billions upon billions upon billions upon billions upon billions.";
 
 	private readonly expandCommandName = "YourLorem.expand";
 
