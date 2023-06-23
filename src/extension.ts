@@ -6,18 +6,18 @@ import * as vscode from 'vscode';
 class YourLorem {
 
 
-	public keyword: string = "falorem";
-	public defaultQuantity: number = 10;
-	public sampleText: string = "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.";
+	public keyword = "falorem";
+	public defaultQuantity = 10;
+	public sampleText = "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.";
 
-	private EXPAND_COMMAND_NAME: string = "YourLorem.expand";
+	private readonly expandCommandName = "YourLorem.expand";
 
-	private loremQuantity: number = 1;
+	private loremQuantity = 1;
 	private keywordPattern!: RegExp;
 
-	private currentLine: number = 0;
-	private lineContent: string = "";
-	private output: string = "";
+	private currentLine = 0;
+	private lineContent = "";
+	private output = "";
 	private editor!: vscode.TextEditor;
 	private parsedCommand!: string[];
 
@@ -34,11 +34,11 @@ class YourLorem {
 	}
 
 
-	activate = (context: vscode.ExtensionContext) => {
+	activate(context: vscode.ExtensionContext){
 
 
 		// Watch for every change in the document
-		vscode.commands.registerTextEditorCommand(this.EXPAND_COMMAND_NAME, this.expandKeyword);
+		vscode.commands.registerTextEditorCommand(this.expandCommandName, this.expandKeyword);
 
 		let noKeyMsg = vscode.commands.registerTextEditorCommand("YourLorem.key-not-detected", () => {
 			vscode.window.showErrorMessage('YourLorem: Sorry! Keyword not detected.');
@@ -54,7 +54,7 @@ class YourLorem {
 
 	};
 
-	expandKeyword = () => {
+	private expandKeyword(){
 
 
 		if (!this.isKeyDetected().length) {
@@ -74,12 +74,12 @@ class YourLorem {
 			builder.delete(selection);
 			builder.insert(startSelection, this.output);
 		}).then(err => {
-			console.warn("'YourLorem': Keyword expanded");
+			console.log("'YourLorem': Keyword expanded");
 		});
 
 	};
 
-	private isKeyDetected = () => {
+	private isKeyDetected() {
 
 		// if there is no editor opened
 		if (!this.editor) {
@@ -90,19 +90,19 @@ class YourLorem {
 		this.currentLine = this.editor.selection.active.line ?? 0;
 		this.lineContent = this.editor.document.lineAt(this.currentLine).text;
 
-		this.parsedCommand = this.keywordPattern.exec(this.lineContent) || [];
+		this.parsedCommand = this.keywordPattern.exec(this.lineContent) ?? [];
 
 		return this.parsedCommand;
 	};
 
 
-	setQuantity = () => {
+	private setQuantity(){
 		this.loremQuantity = this.parsedCommand
 			&& (Number(this.parsedCommand[2]) || this.defaultQuantity);
 	};
 
 
-	private setSelection = () => {
+	private setSelection() {
 
 
 		const startChar = this.lineContent.indexOf(this.keyword);
@@ -119,7 +119,7 @@ class YourLorem {
 	};
 
 
-	private setOutput = () => {
+	private setOutput(){
 
 		const segments = this.sampleText.split(/\s+/ig);
 
@@ -137,7 +137,7 @@ class YourLorem {
 
 	};
 
-	private setEditor = () => {
+	private setEditor (){
 		if (vscode.window.activeTextEditor) {
 			this.editor = vscode.window.activeTextEditor;
 		}
@@ -145,12 +145,12 @@ class YourLorem {
 
 	};
 
-	readConfiguration = () => {
+	private readConfiguration(){
 		const config = vscode.workspace.getConfiguration("YourLorem");
 
-		this.sampleText = config.get("text") || this.sampleText;
-		this.keyword = config.get("keyword") || this.keyword;
-		this.defaultQuantity = config.get("default-quantity") || this.defaultQuantity;
+		this.sampleText = config.get("text") ?? this.sampleText;
+		this.keyword = config.get("keyword") ?? this.keyword;
+		this.defaultQuantity = config.get("default-quantity") ?? this.defaultQuantity;
 
 		this.keywordPattern = new RegExp(`(${this.keyword})([0-9]*)`, "mi");
 
