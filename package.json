@@ -3,8 +3,8 @@
   "displayName": "YourLorem - Custom Text Generator",
   "description": "Create your meaningful text snippet",
   "publisher": "javad-ghased",
-  "keywords": ["lorem ipsum", "dummy text", "emmet", "text generator", "persian", "farsi", "farsi lorem ipsum", "persian lorem ipsum","snippet"],
-  "version": "0.0.3",
+  "keywords": ["lorem ipsum", "dummy text", "emmet", "text generator", "persian", "farsi", "farsi lorem ipsum", "persian lorem ipsum","snippet", "لورم ایپسوم فارسی"],
+  "version": "0.0.4",
   "repository": "https://github.com/djawad98/YourLorem",
   "icon": "icon.png",
   "engines": {
