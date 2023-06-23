@@ -49,7 +49,6 @@ If you type `ulorem`  you have a 40 word-long text.
 ## Side notes
  - Any contribution and pull request is happily accepted.
  - If you found **YourLorem** useful do share it with others.
- - Sample text in example above is from `Ebrahim Hadi quotes` google search.
  - دوستان فارسی زبان بدون هیچ سفارشی سازی می توانند از اکستنشن استفاده کنند.
 
 
@@ -58,5 +57,5 @@ If you type `ulorem`  you have a 40 word-long text.
 
 [![alt text][1]][2]
 
-[1]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-2.svg
+[1]: https://cdn.buymeacoffee.com/buttons/v2/default-blue.png
 [2]: https://www.buymeacoffee.com/djawad
